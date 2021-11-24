@@ -39,10 +39,11 @@ class TestPub(unittest.TestCase):
         result = self.pub.drinks
         self.assertEqual(expected, result)
 
-    @unittest.skip("delete...")
+    #@unittest.skip("delete...")
     def test_pub_can_increase_till(self):
         expected = 104
-        result = self.pub.increase_till(drink_3.price)
+        self.pub.increase_till(4.00)
+        result = self.pub.till
         self.assertEqual(expected, result)
 
     @unittest.skip("delete...")
