@@ -10,3 +10,6 @@ class Customer:
     def add_drink(self, drink):
         self.stomach.append(drink)
 
+    def get_drinks(self):
+        return self.stomach
+

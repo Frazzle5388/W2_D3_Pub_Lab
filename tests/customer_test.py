@@ -40,9 +40,9 @@ class TestCustomer(unittest.TestCase):
         expected = len(self.customer.stomach)
         self.assertEqual(expected, result)
 
-    @unittest.skip("delete...")
+    #@unittest.skip("delete...")
     def test_get_number_of_drinks(self):
-        result = []
+        result = 0
         expected = len(self.customer.get_drinks())
         self.assertEqual(expected, result)
 
