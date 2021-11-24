@@ -12,7 +12,7 @@ class TestPub(unittest.TestCase):
         drink_3 = Drink("Camden Hells", 4.00, 3.9) 
         drinks = [drink_1, drink_2, drink_3]
         customer = Customer("Dave", [], 20.00)
-        self.pub = Pub("The Prancing Pony", 100.00,drinks)
+        self.pub = Pub("The Prancing Pony", 100.00, [])
 
     #@unittest.skip("delete...")
     def test_pub_has_name(self):
@@ -22,9 +22,20 @@ class TestPub(unittest.TestCase):
     def test_pub_has_till(self):
         self.assertEqual(100.00, self.pub.till)
 
-    @unittest.skip("delete...")
+    #@unittest.skip("delete...")
     def test_pub_has_drinks(self):
-        expected = drinks
+        expected = []
+        result = self.pub.drinks
+        self.assertEqual(expected, result)
+
+    #@unittest.skip("delete...")
+    def test_add_drink(self):
+        drink_1 = Drink("Monk IPA", 3.50, 4.7)
+        drink_2 = Drink("Joker IPA", 3.60, 4.5)
+        drink_3 = Drink("Camden Hells", 4.00, 3.9) 
+        drinks = [drink_1, drink_2, drink_3]
+        self.pub.add_drink(drinks)  
+        expected = drinks 
         result = self.pub.drinks
         self.assertEqual(expected, result)
 
