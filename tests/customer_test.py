@@ -24,7 +24,7 @@ class TestCustomer(unittest.TestCase):
         expected = 10.00
         self.assertEqual(expected, result)
 
-    @unittest.skip("delete...")
+    #@unittest.skip("delete...")
     def test_reduce_wallet(self):
         self.customer.reduce_wallet(3.50)
         result = self.customer.wallet
