@@ -1,5 +1,6 @@
 import unittest
 from src.customer import Customer
+from src.drink import Drink
 
 class TestCustomer(unittest.TestCase):
 
@@ -30,5 +31,25 @@ class TestCustomer(unittest.TestCase):
         result = self.customer.wallet
         expected = 6.50
         self.assertEqual(expected, result)
+
+    #@unittest.skip("delete...")
+    def test_add_drink(self):
+        drink_1 = Drink("IPA", 5.10, 4.00)
+        self.customer.add_drink(drink_1)
+        result = 1
+        expected = len(self.customer.stomach)
+        self.assertEqual(expected, result)
+
+    @unittest.skip("delete...")
+    def test_get_number_of_drinks(self):
+        result = []
+        expected = len(self.customer.get_drinks())
+        self.assertEqual(expected, result)
+
+    
+
+    
+
+    
 
     

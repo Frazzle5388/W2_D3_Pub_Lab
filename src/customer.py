@@ -6,3 +6,7 @@ class Customer:
 
     def reduce_wallet(self, amount):
         self.wallet -= amount
+
+    def add_drink(self, drink):
+        self.stomach.append(drink)
+
