@@ -9,3 +9,8 @@ class Pub:
 
     def increase_till(self, amount):
         self.till += amount
+
+    def has_drink(self, drink_name):
+        for drink in self.drinks:
+            if drink.name == drink_name:
+                return drink
